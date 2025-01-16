@@ -19,6 +19,7 @@ added to package.json: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"prestart": "graphql-code-generator --config ./src/app/graphql/codegen.ts"
    
 npm start
+
 </b>
 ---------------------------------------------------------------------------------------------
 
