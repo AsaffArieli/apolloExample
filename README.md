@@ -1,59 +1,44 @@
-# ApolloExample
+## Environment:
+<b>
+angular/cli 19.0.6 <br>
+npm 11.0.0 <br> <br>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+ng new apolloExample
 
-## Development server
+ng add apollo-angular
+npm install graphql-ws
 
-To start a local development server, run:
+npm i graphql <br>
+npm i -D typescript <br>
+npm i -D @graphql-codegen/cli <br>
+npm i -D @graphql-codegen/typescript <br>
+npm i -D @graphql-codegen/typescript-operations <br>
+npm i -D @graphql-codegen/typescript-apollo-angular <br>
 
-```bash
-ng serve
-```
+added to package.json: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"prestart": "graphql-code-generator --config ./src/app/graphql/codegen.ts"
+   
+npm start
+</b>
+---------------------------------------------------------------------------------------------
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ApolloError: The current user is not authorized to access this resource.
+## Server Error: Connection rejected: Authorization header is missing.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+<b>Headers recieved on the graphql server:
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Subscription Headers: <br>
+Connection: Upgrade <br>
+Host: localhost:5179 <br>
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 <br>
+Accept-Encoding: gzip, deflate, br, zstd <br>
+Accept-Language: he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7 <br>
+Cache-Control: no-cache <br>
+Origin: http://localhost:4200 <br>
+Pragma: no-cache <br>
+Upgrade: websocket <br>
+Sec-WebSocket-Version: 13 <br>
+Sec-WebSocket-Key: pby794Rto+bg2+shuU2/WA== <br>
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits <br>
+Sec-WebSocket-Protocol: graphql-transport-ws <br></b>
