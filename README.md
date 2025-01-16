@@ -5,7 +5,7 @@ npm 11.0.0 <br> <br>
 
 ng new apolloExample
 
-ng add apollo-angular
+ng add apollo-angular <br>
 npm install graphql-ws
 
 npm i graphql <br>
