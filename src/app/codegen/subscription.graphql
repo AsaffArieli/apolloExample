@@ -1,0 +1,5 @@
+subscription OnBookRecieved {
+    onBookRecieved {
+        id
+    }
+}
